@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
+import { Provider } from "react-redux"
+import store from "./store";
 import './App.css'
 
 function App() {
@@ -8,6 +10,7 @@ function App() {
   return (
     <div className="App bg-slate-600">
       <div>
+        <Provider store = {store}></Provider>
         <a href="https://vitejs.dev" target="_blank">
           <img src="/vite.svg" className="logo" alt="Vite logo" />
         </a>
