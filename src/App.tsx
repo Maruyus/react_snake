@@ -1,5 +1,7 @@
 import { useState } from 'react'
+
 import reactLogo from './assets/react.svg'
+import { ChakraProvider, Container, Heading } from "@chakra-ui/react";
 import { Provider } from "react-redux"
 import store from "./store";
 import './App.css'
@@ -10,7 +12,13 @@ function App() {
   return (
     <div className="App bg-slate-600">
       <div>
-        <Provider store = {store}></Provider>
+        <Provider store = {store}>
+          <ChakraProvider>
+            <Container maxW="container.lg" centerContent>
+              <Heading as="h1" size="xl">SNAKE GAME</Heading>
+            </Container>
+          </ChakraProvider>
+        </Provider>
         <a href="https://vitejs.dev" target="_blank">
           <img src="/vite.svg" className="logo" alt="Vite logo" />
         </a>
